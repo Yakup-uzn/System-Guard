@@ -6,16 +6,6 @@ Proje, Microsoft Graph API entegrasyonu ile SOC kaynaklarından gelen güvenlik 
 
 
 ---
-## 📷 **Uygulama Görselleri**
-
-![1](https://github.com/user-attachments/assets/d3d72adb-41da-4deb-8052-9a496e6d07c5)
-![2r](https://github.com/user-attachments/assets/653a298c-6c84-4729-8bfc-222839c11d2d)
-![3r](https://github.com/user-attachments/assets/3fa83a43-9a7f-4b70-bcea-c054ae2e7809)
-![4r](https://github.com/user-attachments/assets/efbd9255-862b-4ed2-bb60-8d6e082f833d)
-![6](https://github.com/user-attachments/assets/da6cffcd-58b5-49ba-8dc4-a0a3567fd96e)
-
-
----
 
 ## 📌 **Temel Özellikler**
 
@@ -36,6 +26,17 @@ Proje, Microsoft Graph API entegrasyonu ile SOC kaynaklarından gelen güvenlik 
 ### 📊 Dashboard ve Filtreleme
 - Mail yoğunluğu, tehdit türleri ve kullanıcı bazlı etkileşimler dashboard’da analiz edilir.
 - Gelen mailler tablo halinde filtrelenebilir şekilde listelenir.
+
+---
+
+## 📷 **Uygulama Görselleri**
+
+![1](https://github.com/user-attachments/assets/d3d72adb-41da-4deb-8052-9a496e6d07c5)
+![2r](https://github.com/user-attachments/assets/653a298c-6c84-4729-8bfc-222839c11d2d)
+![3r](https://github.com/user-attachments/assets/3fa83a43-9a7f-4b70-bcea-c054ae2e7809)
+![4r](https://github.com/user-attachments/assets/efbd9255-862b-4ed2-bb60-8d6e082f833d)
+![6](https://github.com/user-attachments/assets/da6cffcd-58b5-49ba-8dc4-a0a3567fd96e)
+
 
 ---
 
