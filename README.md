@@ -42,10 +42,17 @@ Proje, Microsoft Graph API entegrasyonu ile SOC kaynaklarından gelen güvenlik 
 ---
 
 ## 📷 **Uygulama Görselleri**
-
-> _(Bu alana uygulamadan ekran görüntüleri ekleyebilirsiniz. Örnek: mail listesi, detay görünümü, IP analizi, dashboard vs.)_
-
 ---
+![image](https://github.com/user-attachments/assets/d66a4d5c-76f8-4c24-9123-5a7e809ec2bc)
+
+![image](https://github.com/user-attachments/assets/c53f7163-ec80-4a89-b7ce-9213e59db0ff)
+
+
+![image](https://github.com/user-attachments/assets/e415de48-5d88-4f7d-af8c-8f0097557529)
+
+![image](https://github.com/user-attachments/assets/b9ebe8fa-8ac6-414b-8b87-e5572fc90652)
+
+![image](https://github.com/user-attachments/assets/f04dc50b-c469-4c14-a6fb-5098398af2ee)
 
 ## 🚀 **Kurulum Adımları**
 
