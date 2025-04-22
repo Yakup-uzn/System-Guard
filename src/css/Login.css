@@ -1,0 +1,97 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/arkaplan2.gif') no-repeat center center;
+  background-size: cover;
+}
+
+.login-form {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  padding: 40px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-container .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.login-form h2 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border: 1px solid #a0c8f0;
+  box-shadow: 0 0 8px rgba(160, 200, 240, 0.5);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #8dd1f2;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #77c4eb;
+}
+
+.error {
+  color: #ff4b4b;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+}
