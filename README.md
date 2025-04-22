@@ -1,37 +1,37 @@
-# System-Guard
-# ☕ Java Spring Boot Geliştirme Ortamı Kurulum Rehberi (Windows)
+# System-Guard – Backend ve Frontend Kurulum Rehberi 🚀
 
-Bu rehberde sıfırdan bir Java Spring Boot geliştirme ortamı kuracağız. Kurulum adımlarında şunlar yer alır:
+Merhaba,  
+Bu rehber, **System-Guard** projesinin backend (Java Spring Boot) ve frontend (ReactJS) tarafını kendi bilgisayarında çalıştırabilmen için hazırlanmıştır.
 
-- Java JDK 17 kurulumu
-- IntelliJ IDEA kurulumu (Spring IDE)
-- Apache Maven kurulumu
-- Apache Tomcat kurulumu (opsiyonel)
-- Ortam değişkenleri
-- Proje çalıştırma adımları
+Aşağıdaki adımları takip ederek uygulamayı eksiksiz şekilde ayağa kaldırabilirsin.
 
 ---
 
-## ✅ 1. Java 17 Kurulumu
+## ☕ Java Spring Boot – Backend Kurulum Rehberi (Windows)
 
-🔗 [Java 17 Oracle Archive](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+### 🔧 Kurulum İçeriği:
+- Java JDK 17
+- IntelliJ IDEA (veya başka bir IDE)
+- Apache Maven
+- (Opsiyonel) Apache Tomcat
 
-### 🔧 Kurulum Adımları:
-1. "Windows x64 Installer" dosyasını indir ve çalıştır.
-2. Kurulum yolunu not al (örnek: `C:\Program Files\Java\jdk-17`).
-3. Kurulum tamamlandıktan sonra ortam değişkenlerini ayarla.
+---
 
-### ⚙️ Ortam Değişkeni Ayarı:
-- `JAVA_HOME` oluştur:
-  ```
-  JAVA_HOME = C:\Program Files\Java\jdk-17
-  ```
-- `Path` değişkenine şunu ekle:
-  ```
-  %JAVA_HOME%\bin
-  ```
+### ✅ 1. Java 17 Kurulumu
 
-### ✅ Kontrol:
+📥 [Java 17 Oracle Archive](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+
+1. “Windows x64 Installer” indir ve kur.
+2. Ortam değişkeni oluştur:
+   ```
+   JAVA_HOME = C:\Program Files\Java\jdk-17
+   ```
+3. `Path` değişkenine şunu ekle:
+   ```
+   %JAVA_HOME%\bin
+   ```
+
+✅ Doğrulama:
 ```bash
 java -version
 javac -version
@@ -39,82 +39,141 @@ javac -version
 
 ---
 
-## ✅ 2. IntelliJ IDEA Kurulumu (Spring IDE)
+### ✅ 2. IntelliJ IDEA Kurulumu
 
-🔗 [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/)
+📥 [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/)
 
-### 🧭 Kurulum Adımları:
-1. Community Edition indir ve yükle.
-2. İlk açılışta `JAVA_HOME` klasörünü tanıt:  
-   File > Project Structure > SDKs > Add JDK → `C:\Program Files\Java\jdk-17`
-3. Projeni `pom.xml` içeren klasörden aç.
-4. Sağ altta çıkan `Maven project needs to be imported` uyarısına tıkla → Import Project.
+1. IntelliJ IDEA kur.
+2. File > Project Structure > SDKs > Add JDK kısmından `jdk-17` klasörünü tanıt.
+3. Projenin bulunduğu klasördeki `pom.xml` dosyasını seçerek projeyi aç.
+4. Sağ altta çıkan “Import Maven Project” uyarısını kabul et.
 
-### ⚙️ IDE Önerilen Ayarlar:
-- **Java Compiler Level:** 17  
-- **Encoding:** UTF-8  
-- **Build Tool:** Maven  
-- **Frameworks:** Spring Boot (otomatik algılanır veya elle eklenir)
-
-### ▶️ Proje Çalıştırma:
-`src/main/java/.../Application.java` → sağ tık → `Run 'Application'`
-
-> Alternatif IDE:  
-> 🔸 [Spring Tool Suite (STS)](https://spring.io/tools) (Eclipse tabanlı)
+🔁 Alternatif IDE: Spring Tool Suite (STS)
 
 ---
 
-## ✅ 3. Apache Maven Kurulumu
+### ✅ 3. Apache Maven Kurulumu
 
-🔗 [Maven İndir](https://maven.apache.org/download.cgi)
+📥 [Maven İndir](https://maven.apache.org/download.cgi)
 
-### 📦 Kurulum:
-1. `apache-maven-*-bin.zip` dosyasını indir.
-2. `C:\Program Files\Apache\Maven` klasörüne çıkar.
+1. ZIP olarak indir.
+2. `C:\Program Files\Apache\Maven` içine çıkar.
+3. Ortam değişkenlerini ekle:
+   ```
+   MAVEN_HOME = C:\Program Files\Apache\Maven
+   %MAVEN_HOME%\bin → Path’e ekle
+   ```
 
-### ⚙️ Ortam Değişkeni Ayarı:
-- `MAVEN_HOME` oluştur:
-  ```
-  MAVEN_HOME = C:\Program Files\Apache\Maven
-  ```
-- `Path` değişkenine şunu ekle:
-  ```
-  %MAVEN_HOME%\bin
-  ```
-
-### ✅ Kontrol:
+✅ Doğrulama:
 ```bash
 mvn -version
 ```
 
 ---
 
-## ✅ 4. Apache Tomcat Kurulumu (Opsiyonel)
+### ▶️ Uygulamayı Çalıştır
 
-🔗 [Tomcat 9 İndir](https://tomcat.apache.org/download-90.cgi)
+Proje dizininde terminal aç:
 
-### 🛠️ Adımlar:
-1. ZIP dosyasını indir.
-2. `C:\apache-tomcat-9.0.85` klasörüne çıkar.
-3. `bin/startup.bat` dosyasını çalıştır.
-4. Tarayıcıdan test et:
-```
-http://localhost:8080
+```bash
+mvn spring-boot:run
 ```
 
-> Tomcat için `CATALINA_HOME` değişkeni tanımlamak istersen:
-```
-CATALINA_HOME = C:\apache-tomcat-9.0.85
+veya
+
+`src/main/java/.../Application.java` dosyasına sağ tıklayıp **Run**.
+
+---
+
+## ⚛️ React – Frontend Kurulum Rehberi
+
+Bu bölümde ReactJS ile hazırlanmış frontend uygulamasının nasıl kurulup çalıştırılacağı yer alıyor.
+
+---
+
+### ✅ 1. Node.js ve npm Kurulumu
+
+📥 [https://nodejs.org](https://nodejs.org)  
+🔹 LTS sürümünü indir.
+
+✅ Doğrulama:
+```bash
+node -v
+npm -v
 ```
 
 ---
 
-## ✅ 5. Ortam Değişkenleri Özeti
+### ✅ 2. Projeyi Al
 
-| Değişken Adı     | Değeri                                  |
-|------------------|------------------------------------------|
-| JAVA_HOME        | C:\Program Files\Java\jdk-17             |
-| MAVEN_HOME       | C:\Program Files\Apache\Maven            |
-| CATALINA_HOME    | C:\apache-tomcat-9.0.85                  |
-| Path (ekle)      | %JAVA_HOME%\bin;<br>%MAVEN_HOME%\bin;    |
+**ZIP ile teslim ettiysem:**
+```bash
+ZIP dosyasını çıkar → terminal aç → 
+cd react-uygulama-klasoru
+```
+
+**Git ile aldıysan:**
+```bash
+git clone https://github.com/kullanici/proje-adi.git
+cd proje-adi
+```
+
+---
+
+### ✅ 3. Bağımlılıkları Kur
+
+```bash
+npm install
+```
+
+Bu komut, `package.json` dosyasına göre gerekli tüm modülleri indirir.
+
+---
+
+### ✅ 4. Uygulamayı Başlat
+
+```bash
+npm start
+```
+
+Tarayıcıda otomatik olarak açılmazsa:
+```
+http://localhost:3000
+```
+
+---
+
+### ⚠️ Alternatif Scriptler
+
+| Komut             | Açıklama                                      |
+|------------------|-----------------------------------------------|
+| `npm run build`  | Prodüksiyon için build klasörü oluşturur      |
+| `npm test`       | Testleri çalıştırır                           |
+| `npm run dev`    | Vite gibi dev ortamı (varsa) başlatır         |
+
+---
+
+### 💡 Ekstra Bilgiler
+
+- `node_modules` klasörü paylaşılmaz, her zaman `npm install` ile yüklenir.
+- `PORT` çatışması yaşarsan:
+```bash
+set PORT=3001 && npm start    # Windows
+PORT=3001 npm start           # macOS/Linux
+```
+
+---
+
+## ✅ Sistem Kontrol Listesi
+
+| Kontrol                          | Durum  |
+|----------------------------------|--------|
+| Java 17 yüklendi mi?             | ✅     |
+| Maven yüklendi mi?               | ✅     |
+| `mvn spring-boot:run` çalıştı mı?| ✅     |
+| Node.js ve npm yüklü mü?         | ✅     |
+| `npm install` çalıştı mı?        | ✅     |
+| `npm start` ile React açıldı mı? | ✅     |
+
+---
 
