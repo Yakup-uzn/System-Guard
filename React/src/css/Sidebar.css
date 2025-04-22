@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0f1624, #070b12);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.3);
+  border-top-right-radius: 30px;
+}
+
+.logo-section {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: #c2b280; /* Premium Altın Tonu */
+}
+
+.menu {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 30px;
+  color: #cfd8dc;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.menu-item:hover {
+  color: #ffffff;
+  border-left-color: #c2b280;
+  background-color: rgba(255,255,255,0.05);
+  padding-left: 35px;
+}
+
+.menu-item.active {
+  background-color: rgba(194,178,128,0.2);
+  color: #c2b280;
+  font-weight: 500;
+  border-left-color: #c2b280;
+  padding-left: 35px;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.premium-btn {
+  background-color: #c2b280;
+  color: #ffffff;
+}
+
+.premium-btn:hover {
+  background-color: #a79465;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(194,178,128,0.5);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 1px solid #cfd8dc;
+  color: #cfd8dc;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(207,216,220,0.2);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.logout-btn {
+  background-color: #b71c1c;
+  color: #ffffff;
+}
+
+.logout-btn:hover {
+  background-color: #8c1414;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(183,28,28,0.3);
+}
+
+.logo-section {
+  padding: 25px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-image {
+  width: 60px;
+  object-fit: contain;
+}

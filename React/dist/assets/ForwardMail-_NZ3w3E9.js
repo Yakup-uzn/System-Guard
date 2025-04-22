@@ -1,0 +1,1 @@
+import{j as r}from"./index-Be5gV0GW.js";import"./icons-DvRqANnr.js";import"./react-Csw2ODfV.js";import"./firebase-Bvu3lIf5.js";const m=()=>r.jsx("h2",{children:"Forward Mail Yönetimi"});export{m as default};
