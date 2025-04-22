@@ -7,16 +7,20 @@ Proje, Microsoft Graph API entegrasyonu ile SOC kaynaklarından gelen güvenlik 
 ---
 ## 📷 **Uygulama Görselleri**
 
-(![1](https://github.com/user-attachments/assets/db4fb5ea-4c90-457e-bfd1-d8dd0722b9ba)
+![1](https://github.com/user-attachments/assets/721c51ac-7f69-4537-b72c-268d17140643)
 
 
-![image](![2](https://github.com/user-attachments/assets/c14aba0c-91ca-46b2-a631-690dc88af908)
+![2](https://github.com/user-attachments/assets/826b1398-7094-4018-8a1d-968b06abea7f)
 
-![image](![3](https://github.com/user-attachments/assets/3539f366-26f9-47ae-99bb-726ce3a30c5b)
 
-![image](![4](https://github.com/user-attachments/assets/39abb976-2c8b-49f4-ab4d-842f8d00704d)
+![3](https://github.com/user-attachments/assets/e817d749-2700-4e96-8150-b538b16ba3f6)
 
-![image](![6](https://github.com/user-attachments/assets/9bb27e63-e2a4-44b1-8810-8d8743e55cc3)
+
+![4](https://github.com/user-attachments/assets/3f75a292-c4a2-4c08-b687-a165a5b4f0a3)
+
+
+![6](https://github.com/user-attachments/assets/1a594fff-57ce-447e-b953-d390ed70c0f5)
+
 
 
 ---
