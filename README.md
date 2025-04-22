@@ -1,179 +1,61 @@
-# System-Guard – Backend ve Frontend Kurulum Rehberi 🚀
+# 🛡️ **SystemGuard: SOC Mail Yönetim ve Güvenlik Portalı**
 
-Merhaba,  
-Bu rehber, **System-Guard** projesinin backend (Java Spring Boot) ve frontend (ReactJS) tarafını kendi bilgisayarında çalıştırabilmen için hazırlanmıştır.
+**SystemGuard**, kurumların **Security Operations Center (SOC)** e-postalarını merkezi bir noktada analiz edebildiği, tehditleri otomatik olarak işleyebildiği ve anlık müdahale yapabildiği kullanıcı dostu bir **güvenlik yönetim portalıdır**.
 
-Aşağıdaki adımları takip ederek uygulamayı eksiksiz şekilde ayağa kaldırabilirsin.
-
----
-
-## ☕ Java Spring Boot – Backend Kurulum Rehberi (Windows)
-
-### 🔧 Kurulum İçeriği:
-- Java JDK 17
-- IntelliJ IDEA (veya başka bir IDE)
-- Apache Maven
-- (Opsiyonel) Apache Tomcat
+Proje, Microsoft Graph API entegrasyonu ile SOC kaynaklarından gelen güvenlik maillerini işler, tehdit unsurlarını kategorilere ayırır ve IP analizleri ile detaylı içerik sunar. Gerçek zamanlı görüntüleme ve işlem yapma özelliği sayesinde güvenlik ekiplerinin iş yükünü azaltır.
 
 ---
 
-### ✅ 1. Java 17 Kurulumu
+## 📌 **Temel Özellikler**
 
-📥 [Java 17 Oracle Archive](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+### ✉️ SOC Mail Entegrasyonu
+- Microsoft Graph API ile gelen güvenlik e-postaları sisteme otomatik olarak çekilir.
+- "Alert Closed" olmayan mailler filtrelenerek veri tabanına kaydedilir.
+- Mailler başlıklarına göre ayrıştırılır (IP, Domain, Analyst Comment, vb.).
 
-1. “Windows x64 Installer” indir ve kur.
-2. Ortam değişkeni oluştur:
-   ```
-   JAVA_HOME = C:\Program Files\Java\jdk-17
-   ```
-3. `Path` değişkenine şunu ekle:
-   ```
-   %JAVA_HOME%\bin
-   ```
+### 🔍 Otomatik IP Analizi
+- Mail içeriğindeki IP adresleri otomatik olarak tanınır.
+- Abuse verileri (ISP, Geo, Domain, Score, Hostnames vb.) çekilerek ekrana yansıtılır.
+- IP'ler whitelist/blacklist sistemine eklenebilir.
 
-✅ Doğrulama:
+### 👤 Kullanıcı İşlem Takibi
+- Her mail üzerinde kim çalışıyor bilgisi anlık olarak gösterilir.
+- WebSocket altyapısı ile canlı güncelleme sağlanır.
+
+### 📊 Dashboard ve Filtreleme
+- Mail yoğunluğu, tehdit türleri ve kullanıcı bazlı etkileşimler dashboard’da analiz edilir.
+- Gelen mailler tablo halinde filtrelenebilir şekilde listelenir.
+
+---
+
+## 💻 **Kullanılan Teknolojiler**
+
+| Katman | Teknoloji |
+|--------|-----------|
+| **Backend** | Java Spring Boot, Spring Data JPA, WebSocket |
+| **Frontend** | React JS |
+| **Veritabanı** | MySQL |
+| **Mail Servisi** | Microsoft Graph API |
+| **Gerçek Zamanlılık** | STOMP WebSocket |
+| **IP Analizi** | AbuseIPDB Entegrasyonu |
+
+---
+
+## 📷 **Uygulama Görselleri**
+
+> _(Bu alana uygulamadan ekran görüntüleri ekleyebilirsiniz. Örnek: mail listesi, detay görünümü, IP analizi, dashboard vs.)_
+
+---
+
+## 🚀 **Kurulum Adımları**
+
+### 1. Gereksinimler
+- Java 17+
+- MySQL 8.x
+- Node.js ve npm
+- Microsoft Azure'da tanımlı bir uygulama (Graph API erişimi için)
+
+### 2. Backend Kurulumu
 ```bash
-java -version
-javac -version
-```
-
----
-
-### ✅ 2. IntelliJ IDEA Kurulumu
-
-📥 [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/)
-
-1. IntelliJ IDEA kur.
-2. File > Project Structure > SDKs > Add JDK kısmından `jdk-17` klasörünü tanıt.
-3. Projenin bulunduğu klasördeki `pom.xml` dosyasını seçerek projeyi aç.
-4. Sağ altta çıkan “Import Maven Project” uyarısını kabul et.
-
-🔁 Alternatif IDE: Spring Tool Suite (STS)
-
----
-
-### ✅ 3. Apache Maven Kurulumu
-
-📥 [Maven İndir](https://maven.apache.org/download.cgi)
-
-1. ZIP olarak indir.
-2. `C:\Program Files\Apache\Maven` içine çıkar.
-3. Ortam değişkenlerini ekle:
-   ```
-   MAVEN_HOME = C:\Program Files\Apache\Maven
-   %MAVEN_HOME%\bin → Path’e ekle
-   ```
-
-✅ Doğrulama:
-```bash
-mvn -version
-```
-
----
-
-### ▶️ Uygulamayı Çalıştır
-
-Proje dizininde terminal aç:
-
-```bash
-mvn spring-boot:run
-```
-
-veya
-
-`src/main/java/.../Application.java` dosyasına sağ tıklayıp **Run**.
-
----
-
-## ⚛️ React – Frontend Kurulum Rehberi
-
-Bu bölümde ReactJS ile hazırlanmış frontend uygulamasının nasıl kurulup çalıştırılacağı yer alıyor.
-
----
-
-### ✅ 1. Node.js ve npm Kurulumu
-
-📥 [https://nodejs.org](https://nodejs.org)  
-🔹 LTS sürümünü indir.
-
-✅ Doğrulama:
-```bash
-node -v
-npm -v
-```
-
----
-
-### ✅ 2. Projeyi Al
-
-**ZIP ile teslim ettiysem:**
-```bash
-ZIP dosyasını çıkar → terminal aç → 
-cd react-uygulama-klasoru
-```
-
-**Git ile aldıysan:**
-```bash
-git clone https://github.com/kullanici/proje-adi.git
-cd proje-adi
-```
-
----
-
-### ✅ 3. Bağımlılıkları Kur
-
-```bash
-npm install
-```
-
-Bu komut, `package.json` dosyasına göre gerekli tüm modülleri indirir.
-
----
-
-### ✅ 4. Uygulamayı Başlat
-
-```bash
-npm start
-```
-
-Tarayıcıda otomatik olarak açılmazsa:
-```
-http://localhost:3000
-```
-
----
-
-### ⚠️ Alternatif Scriptler
-
-| Komut             | Açıklama                                      |
-|------------------|-----------------------------------------------|
-| `npm run build`  | Prodüksiyon için build klasörü oluşturur      |
-| `npm test`       | Testleri çalıştırır                           |
-| `npm run dev`    | Vite gibi dev ortamı (varsa) başlatır         |
-
----
-
-### 💡 Ekstra Bilgiler
-
-- `node_modules` klasörü paylaşılmaz, her zaman `npm install` ile yüklenir.
-- `PORT` çatışması yaşarsan:
-```bash
-set PORT=3001 && npm start    # Windows
-PORT=3001 npm start           # macOS/Linux
-```
-
----
-
-## ✅ Sistem Kontrol Listesi
-
-| Kontrol                          | Durum  |
-|----------------------------------|--------|
-| Java 17 yüklendi mi?             | ✅     |
-| Maven yüklendi mi?               | ✅     |
-| `mvn spring-boot:run` çalıştı mı?| ✅     |
-| Node.js ve npm yüklü mü?         | ✅     |
-| `npm install` çalıştı mı?        | ✅     |
-| `npm start` ile React açıldı mı? | ✅     |
-
----
-
+cd backend
+./mvnw clean install
